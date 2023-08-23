@@ -1,7 +1,8 @@
 # Cars2
 ### The idea with, and reasons for why to use, a ORM-mapper:
 
-Your short summary here
+The idea of using a ORM-mapper, is that even though you dont have created columns in your DB, then you can create them from your IDE. 
+Which is nice because, then you save a lot of time and dont have to both be on your DB manager and IDE at the same time.
 
 ### The meaning of the terms JPA, Hibernate and Spring Data JPA and how they are connected:
 
