@@ -14,8 +14,8 @@ import java.util.List;
 @Controller
 public class DeveloperData implements ApplicationRunner {
 
-    CarsRepository carsRepository;
-    MemberRepository memberRepository;
+    final CarsRepository carsRepository;
+    final MemberRepository memberRepository;
 
     public DeveloperData(CarsRepository carsRepository, MemberRepository memberRepository ){
         this.carsRepository = carsRepository;
