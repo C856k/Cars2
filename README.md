@@ -16,11 +16,11 @@ Spring Data JPA is part of the broader Spring Data project and is a higher-level
 JPA is a specification, Hibernate is one of its implementations, and Spring Data JPA is a higher-level framework built on top of JPA and Hibernate to simplify database access in Spring applications. They work together to enable efficient database interactions in Java applications, particularly in the Spring ecosystem.
 ### How to create simple Java entities and map them to a database via the Spring Data API:
 
-How you did that in your code
+
 
 ### How to control the mapping between individual fields in an Entity class and their matching columns in the database:
 
-How you did that in your code
+I did that, by providing the different information that a columns needs and when i run the program, the different columns would be created with the provided variables, that i made in the classes in the Entity packages.
 
 ### How to auto generate IDs, and how to ensure we are using a specific database's preferred way of doing it (Auto Increment in our case for  MySQL):
    
@@ -35,4 +35,4 @@ I did that by hard code some data that couldve been in the MySQL and then made s
 
 ### How to add (dev) connection details for you local MySQL database:
 
-You do that in codes application properties, where you makes it read your username and password, that you have provided in the configuration settings.
+You do that in the projects application properties, where you makes it read your username and password, that you have provided in the configuration settings.
