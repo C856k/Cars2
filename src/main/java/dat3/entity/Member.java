@@ -38,7 +38,7 @@ public class Member {
     private LocalDateTime created;
 
     @UpdateTimestamp
-    private LocalDateTime lastEdited;
+    private LocalDateTime Edited;
 
     public Member(String user, String password, String email, String firstName,
                   String lastName, String street, String city, String zip) {
