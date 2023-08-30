@@ -25,7 +25,7 @@ jobs:
           java-version: '17'
           name: java-app
           path: '${{ github.workspace }}/target/*.jar'
-          retention-days: 1
+          
                   
 
       - name: Build with Maven
@@ -36,6 +36,7 @@ jobs:
         with:
           name: java-app
           path: '${{ github.workspace }}/target/*.jar'
+          retention-days: 1
 
           
 
