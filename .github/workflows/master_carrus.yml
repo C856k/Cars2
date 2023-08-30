@@ -3,7 +3,6 @@
 
 name: Build and deploy JAR app to Azure Web App - CarRus
 
-
 on:
   push:
     branches:
@@ -13,20 +12,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
 
+    steps:
       - uses: actions/checkout@v2
 
       - name: Set up Java version
         uses: actions/setup-java@v1
         with:
           java-version: '17'
-          name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
-          
-                  
 
       - name: Build with Maven
         run: mvn clean install
@@ -36,8 +29,6 @@ jobs:
         with:
           name: java-app
           path: '${{ github.workspace }}/target/*.jar'
-
-          
 
   deploy:
     runs-on: ubuntu-latest
@@ -58,7 +49,5 @@ jobs:
         with:
           app-name: 'CarRus'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2829E1A02A504E579E787AB2C8582C4A }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DFCD6CFFF9894508BC8B4DCC2E3FAF83 }}
           package: '*.jar'
-          path: '${{ github.workspace }}/target/*.jar'
-          retention-days: 1
