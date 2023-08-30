@@ -2,9 +2,8 @@ package dat3.entity;
 
 import dat3.repository.CarsRepository;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -13,6 +12,8 @@ import java.time.LocalDateTime;
 @Entity
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor
 public class Car extends AdminDetails{
     @Id
@@ -29,6 +30,11 @@ public class Car extends AdminDetails{
 
 @Column(name ="max_discount",nullable = true)
     private int bestDiscount;
+
+@CreationTimestamp
+LocalDateTime created;
+@UpdateTimestamp
+LocalDateTime lastEdited;
 
     public Car(String brand, String model) {
         this.brand = brand;
