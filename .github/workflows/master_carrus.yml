@@ -36,7 +36,6 @@ jobs:
         with:
           name: java-app
           path: '${{ github.workspace }}/target/*.jar'
-          retention-days: 1
 
           
 
@@ -61,3 +60,5 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2829E1A02A504E579E787AB2C8582C4A }}
           package: '*.jar'
+          path: '${{ github.workspace }}/target/*.jar'
+          retention-days: 1
