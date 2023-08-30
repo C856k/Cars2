@@ -3,6 +3,7 @@
 
 name: Build and deploy JAR app to Azure Web App - CarRus
 
+
 on:
   push:
     branches:
@@ -12,6 +13,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    with:
+  name: java-app
+  path: '${{ github.workspace }}/target/*.jar'
+  retention-days: 1
 
     steps:
       - uses: actions/checkout@v2
