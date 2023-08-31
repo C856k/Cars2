@@ -32,7 +32,7 @@ public class CarResponse {
         if (includeAll){
             this.bestDiscount = car.getBestDiscount();
             this.created = car.getCreated();
-            this.edited = car.getLastEdited();
+            this.edited = car.getEdited();
         }
     }
 }

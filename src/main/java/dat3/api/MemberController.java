@@ -2,10 +2,7 @@ package dat3.api;
 
 import dat3.dto.MemberRequest;
 import dat3.dto.MemberResponse;
-import dat3.entity.Member;
-import dat3.repository.MemberRepository;
 import dat3.service.MemberService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +21,7 @@ class MemberController {
     //Security Admin only
     @GetMapping
     List<MemberResponse> getMembers(){
-        return memberService.getMember(false);
+        return memberService.getMembers(false);
     }
 
     //Security Admin
@@ -39,18 +36,22 @@ class MemberController {
         return memberService.addMember(body);
     }
 
-    //Security ???
+    //Security User or Admin
     @PutMapping("/{username}")
     ResponseEntity<Boolean> editMember(@RequestBody MemberRequest body, @PathVariable String username){
         return memberService.editMember(body,username);
     }
 
-    //Security ????
+    //Security Admin
     @PatchMapping("/ranking/{username}/{value}")
-    ResponseEntity<Boolean> setRankingForUser(@PathVariable String username, @PathVariable int value) {return null;}
+    void setRankingForUser(@PathVariable String username, @PathVariable int value) {
+        memberService.setRankingForUser(username,value);
+    }
 
-    // Security ????
+    // Security Admin
     @DeleteMapping("/{username}")
-    void deleteMemberByUsername(@PathVariable String username) {}
+    void deleteMemberByUsername(@PathVariable String username) {
+        memberService.deleteMemberByUsername(username);
+    }
 
 }

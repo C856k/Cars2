@@ -33,11 +33,14 @@ public class Car extends AdminDetails{
 
 @CreationTimestamp
 LocalDateTime created;
+
 @UpdateTimestamp
-LocalDateTime lastEdited;
+LocalDateTime edited;
+
 
     public Car(String brand, String model) {
         this.brand = brand;
         this.model = model;
+
     }
 }

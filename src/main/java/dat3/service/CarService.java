@@ -34,7 +34,7 @@ public class CarService {
                 bestDiscount(body.getBestDiscount()).build();
         return new CarResponse(newCar,true);
     }
-    public CarResponse editCar(CarResponse body, Integer id){
+    public CarResponse editCar(CarRequest body, Integer id){
         Car carToEdit = carsRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.BAD_REQUEST,"Car with this ID doesnt exist"));
         carToEdit.setBrand(body.getBrand());
         carToEdit.setModel(body.getModel());

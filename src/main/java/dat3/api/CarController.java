@@ -21,7 +21,7 @@ public class CarController {
         return carService.getCars(false);
     }
     @GetMapping(path = "/admin/{id}")
-    CarResponse getCarByIdAdmin(@PathVariable String id) {
+    CarResponse getCarByIdAdmin(@PathVariable Integer id) {
         return carService.findById(id,true);
     }
     @PostMapping
@@ -29,19 +29,19 @@ public class CarController {
         return carService.addCar(body);
     }
     @PutMapping("/{id}")
-    CarResponse editCar(@RequestBody CarResponse body, @PathVariable String id){
+    CarResponse editCar(@RequestBody CarRequest body, @PathVariable Integer id){
         return carService.editCar(body,id);
     }
     @PatchMapping("/price/{id}/{newPrice}")
-    void setPrice(@PathVariable String id,@PathVariable double newPrice){
+    void setPrice(@PathVariable Integer id,@PathVariable double newPrice){
         carService.setPrice(id,newPrice);
     }
     @PatchMapping("/discount/{id}/{newDiscount}")
-    void setPrice(@PathVariable String id, @PathVariable int newDiscount){
+    void setPrice(@PathVariable Integer id, @PathVariable int newDiscount){
         carService.setDiscount(id,newDiscount);
     }
     @DeleteMapping("/{id}")
-    ResponseEntity<Boolean> deleteCar(@PathVariable String id){
+    ResponseEntity<Boolean> deleteCar(@PathVariable Integer id){
         return carService.deleteCar(id);
     }
 }
