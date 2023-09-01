@@ -7,7 +7,8 @@ The benefits of using a RESTful API, is that you makes sure that you avoid that 
 JSON stands for Javascribt object notation and the reason it fits well with REST, is because it makes the data that the different REST functions, more easy to read if you want to see it as a text file.
 ## How you have designed simple CRUD endpoints using spring boot and DTOs to separate api from data  -> Focus on your use of DTO's
 I have done that by naming the different methods with, the name of their functions, for example if i make an endpoint where i want to delete some data. Then i make a connection to the method that handles the deletions and so forth, with other endpoints.
-## What is the advantage of using using DTOs to separate api from data structure when designing rest endpoints
+## What is the advantage of using DTOs to separate api from data structure when designing rest endpoints
+The advantage of using DTOs, is that then you have fully control over what data is being sent, as DTO stands for Data Transfer Objects. 
 
 ## Explain shortly the concept mocking in relation to software testing
 The concept of mocking, is that you make a simulation of a database where you hardcode test data.
