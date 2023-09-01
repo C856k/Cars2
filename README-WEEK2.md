@@ -1,3 +1,6 @@
+## How far i came.
+I have managed to do every step, but somehow i keep getting problems with deploying my application to Azure.
+
 ## What are the benefits of using a RESTful API
 The benefits of using a RESTful API, is that you makes sure that you avoid that a hacker can make those DDos attacks, that sends a lot of requests to a server. That is prevented by using a RESTful API.
 ## What is JSON, and why does JSON fit so well with REST?
