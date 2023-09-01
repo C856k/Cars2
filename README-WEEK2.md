@@ -18,6 +18,7 @@ I did it like i explained in the previous question. I made a "database" where i 
 The concept of a build server is a way to check if, the code that you have pushed to your repository is buildable and doesnt make the program crash. Which can be checked by Github Actions, which we are using to check if its buildable.
 
 ## Explain maven, relevant parts in maven, and how maven is used in our CI setup. Explain where maven is used by your GitHub Actions Script(s)
+I have used maven in my GitHub Action scribt, where i make the build in the Yaml file, by saying Build with Maven and run: mvn clean install
 
 ## Understand and chose cloud service models (IaaS, PaaS, SaaS, DBaaS)for your projects
 Software as a Service (SaaS):
