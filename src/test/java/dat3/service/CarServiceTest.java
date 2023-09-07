@@ -1,9 +1,10 @@
 package dat3.service;
 
-import dat3.dto.CarRequest;
-import dat3.dto.CarResponse;
-import dat3.entity.Car;
-import dat3.repository.CarsRepository;
+import dat3.car.service.CarService;
+import dat3.car.dto.CarRequest;
+import dat3.car.dto.CarResponse;
+import dat3.car.entity.Car;
+import dat3.car.repository.CarsRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

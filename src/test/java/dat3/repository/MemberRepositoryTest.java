@@ -1,6 +1,7 @@
 package dat3.repository;
 
-import dat3.entity.Member;
+import dat3.car.entity.Member;
+import dat3.car.repository.MemberRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

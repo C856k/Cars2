@@ -1,6 +1,6 @@
-package dat3.dto;
+package dat3.car.dto;
 
-import dat3.entity.Car;
+import dat3.car.entity.Car;
 import lombok.*;
 
 @Getter @Setter

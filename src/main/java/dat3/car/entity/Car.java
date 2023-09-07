@@ -1,13 +1,13 @@
-package dat3.entity;
+package dat3.car.entity;
 
-import dat3.repository.CarsRepository;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Car extends AdminDetails{
+public class Car{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
@@ -31,16 +31,33 @@ public class Car extends AdminDetails{
 @Column(name ="max_discount",nullable = true)
     private int bestDiscount;
 
+    public void addReservation(Reservation reservation){
+        if (reservations == null){
+            reservations = new ArrayList<>();
+        }
+        reservations.add(reservation);
+    }
+
+
+@OneToMany(mappedBy = "car")
+List<Reservation> reservations;
+
 @CreationTimestamp
 LocalDateTime created;
 
 @UpdateTimestamp
 LocalDateTime edited;
 
+@OneToOne
+Member member;
+@ManyToOne
+Reservation reservation;
 
-    public Car(String brand, String model) {
+    public Car(String brand, String model,double pricePrDay,Integer bestDiscount) {
         this.brand = brand;
         this.model = model;
+        this.pricePrDay = pricePrDay;
+        this.bestDiscount = bestDiscount;
 
     }
 }

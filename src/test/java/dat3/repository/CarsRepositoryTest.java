@@ -1,6 +1,7 @@
 package dat3.repository;
 
-import dat3.entity.Car;
+import dat3.car.entity.Car;
+import dat3.car.repository.CarsRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +16,8 @@ class CarsRepositoryTest {
     @BeforeEach
     void setUp() {
         if (!isInitialized){
-            carsRepository.save(new Car("Ford","M1"));
-            carsRepository.save(new Car("C2","M2"));
+            carsRepository.save(new Car("Ford","M1",67,8));
+            carsRepository.save(new Car("C2","M2",90,5));
             isInitialized = true;
 
         }

@@ -1,6 +1,6 @@
-package dat3.dto;
+package dat3.car.dto;
 
-import dat3.entity.Member;
+import dat3.car.entity.Member;
 import lombok.*;
 
 @Getter

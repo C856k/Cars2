@@ -1,8 +1,8 @@
-package dat3.dto;
+package dat3.car.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import dat3.entity.Car;
+import dat3.car.entity.Car;
 import lombok.*;
 
 import java.time.LocalDateTime;

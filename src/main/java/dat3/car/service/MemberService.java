@@ -1,9 +1,9 @@
-package dat3.service;
+package dat3.car.service;
 
-import dat3.dto.MemberRequest;
-import dat3.dto.MemberResponse;
-import dat3.entity.Member;
-import dat3.repository.MemberRepository;
+import dat3.car.dto.MemberRequest;
+import dat3.car.dto.MemberResponse;
+import dat3.car.entity.Member;
+import dat3.car.repository.MemberRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

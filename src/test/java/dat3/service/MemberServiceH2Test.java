@@ -1,9 +1,10 @@
 package dat3.service;
 
-import dat3.dto.MemberRequest;
-import dat3.dto.MemberResponse;
-import dat3.entity.Member;
-import dat3.repository.MemberRepository;
+import dat3.car.service.MemberService;
+import dat3.car.dto.MemberRequest;
+import dat3.car.dto.MemberResponse;
+import dat3.car.entity.Member;
+import dat3.car.repository.MemberRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
