@@ -9,6 +9,11 @@ CascadeType:
 CascadeType is being used, when you want to determin, if the rest of the data in a column is getting deleted or not, when you delete some of the data in of the rows. If you want to make the data persist after the deletion, then you put PERSISTS after it. But make sure to have used the @Cascade annotation.
 FetchType:
 
+EAGER:
+FetchType.EAGER makes the data, that needs to be sent to the database faster and takes the parent entity with it when it gets sent. 
+
+LAZY:
+FetchType.LAZY tells Hibernate to only fetch the related entities from the database when you use the relationship.
 mappedBy:
 The purpose of using mappedBy is to define the connection from one class to another when using the @OneToMany annotation.
 ## How/where you have (if done) added user defined queries to you repositories
@@ -18,10 +23,12 @@ I have attempted to make a query in one of my repository classes and added the r
 I selected Azure Database for MySQL, where i had to provide the right information to make the SQL Database and then i made a connection on MySQL 
 and checked if my connection to Azure worked. 
 ## a few words about where you have used inheritance in your project, and how it's reflected in your database
-
+The only place that i have used inheritance, is in my member class where i extend to the userWithRoles and i have used the @Inheritance annotation to put the inheritanceType to it, to show what type of strategy the inheritance should use.
 ## What are the pros & cons of using the Single Table Strategy for inheritance?
+
 Pros:
+The pros about using the Single Table Strategy, is that then you have a simplier overview of the tables in your database and its easy to add new classes to your database, but using columns to the database.
 
 Cons:
-
+The cons about using the Single Table Strategy, is then all the data that might not be need in one of the tables of the database.
 ## how are passwords stored in the database with the changes suggested in part-6 of the exercise
