@@ -1,5 +1,6 @@
 package dat3.car.api;
 
+import dat3.car.entity.Member;
 import dat3.car.service.MemberService;
 import dat3.car.dto.MemberRequest;
 import dat3.car.dto.MemberResponse;
@@ -40,6 +41,10 @@ class MemberController {
     @PutMapping("/{username}")
     ResponseEntity<Boolean> editMember(@RequestBody MemberRequest body, @PathVariable String username){
         return memberService.editMember(body,username);
+    }
+    @GetMapping(path = "/members-with-reservations")
+    public List<Member> getAllMembersWithReservations(){
+        return memberService.getAllMembersWithReservations();
     }
 
     //Security Admin

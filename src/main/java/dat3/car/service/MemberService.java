@@ -80,5 +80,8 @@ public class MemberService {
                 orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND,"Member with this username does not exist"));
     }
 
+    public List<Member> getAllMembersWithReservations() {
+        return memberRepository.findAllMembersWithReservations();
+    }
 }
 

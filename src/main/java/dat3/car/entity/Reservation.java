@@ -12,7 +12,7 @@ import java.time.LocalDate;
 //Lombok above
 @Entity
 @NoArgsConstructor
-public class Reservation extends AdminDetails{
+public class Reservation {
     @Id
             @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
