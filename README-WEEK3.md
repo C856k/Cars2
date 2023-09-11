@@ -1,3 +1,6 @@
+I keep getting problems with running the program, sometimes it works and sometimes it doesnt.
+I have made roughly to step 8 or 9 in this weeks exercise 
+
 ## Where and why you have used a @OneToMany annotation 
 I have used the @OneToMany annotation in my Member class, because a member can have many carreservations on different cars, 
 but a car cant have many reservations from different members on the same day.
@@ -32,3 +35,4 @@ The pros about using the Single Table Strategy, is that then you have a simplier
 Cons:
 The cons about using the Single Table Strategy, is then all the data that might not be need in one of the tables of the database.
 ## how are passwords stored in the database with the changes suggested in part-6 of the exercise
+The way that the passwords is being stored in the database, is that they are being encrypted so the users passwords are safe, in case that a hacker gains access to the database.
