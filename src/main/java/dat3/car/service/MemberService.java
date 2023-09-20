@@ -2,7 +2,9 @@ package dat3.car.service;
 
 import dat3.car.dto.MemberRequest;
 import dat3.car.dto.MemberResponse;
+import dat3.car.entity.Car;
 import dat3.car.entity.Member;
+import dat3.car.repository.CarsRepository;
 import dat3.car.repository.MemberRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +17,7 @@ import java.util.List;
 @Service
 public class MemberService {
     MemberRepository memberRepository;
+    CarsRepository carsRepository;
 
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
@@ -83,5 +86,6 @@ public class MemberService {
     public List<Member> getAllMembersWithReservations() {
         return memberRepository.findAllMembersWithReservations();
     }
+
 }
 

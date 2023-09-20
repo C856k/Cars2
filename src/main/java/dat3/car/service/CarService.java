@@ -69,4 +69,7 @@ public class CarService {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Could not delete car. Most likely because it part of a rental/reservation");
         }
     }
+    public List<Car> getCarsByBrandAndModel(String brand, String model) {
+        return carsRepository.findByBrandAndModel(brand, model);
+    }
 }
