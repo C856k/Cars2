@@ -64,7 +64,7 @@ class MemberServiceH2Test {
         //assertEquals(HttpStatus.NOT_FOUND, exception.getStatusCode());
     }
 
-    //@Test
+    @Test
         /* Remember MemberRequest comes from the API layer, and MemberResponse is returned to the API layer
          * Internally addMember savex a Member entity to the database*/
     void testAddMember_UserDoesNotExist() {
@@ -108,7 +108,7 @@ class MemberServiceH2Test {
         assertEquals("city1",response.getCity());
     }
 
-    //@Test
+    @Test
     void testEditMemberNON_ExistingUsernameThrows() {
         MemberRequest request = new MemberRequest();
         ResponseStatusException exception = assertThrows(ResponseStatusException.class,
